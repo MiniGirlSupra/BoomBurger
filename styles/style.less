@@ -1,0 +1,1066 @@
+.benefits-text() {
+  font-family: Trebuchet MS, sans-serif;
+  display: inherit;
+  font-size: 14px;
+  color: white;
+  line-height: 1.357;
+
+}
+
+.blocks-titles() {
+  text-align: center;
+  font-family: Formular, sans-serif;
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+  line-height: 1.333;
+}
+
+.timer-style() {
+  font-family: Trebuchet MS, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  background: white;
+  color: red;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.input() {
+  color: white;
+  border-radius: 5px;
+  width: 251px;
+  height: 52px;
+  padding: 19px;
+  margin-bottom: 18px;
+  border: 1px solid rgb(253, 177, 91);
+  outline: none;
+  box-sizing: border-box;
+  display: block;
+  background: transparent;
+}
+
+.form-error() {
+  font-family: Trebuchet MS, sans-serif;
+  color: red;
+  margin-bottom: 15px;
+  font-size: 12px;
+  display: none;
+  position: absolute;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Formular;
+  src: url("../fonts/Formular.ttf");
+}
+
+@font-face {
+  font-family: Formular;
+  src: url("../fonts/FormularBold.ttf");
+  font-weight: bold;
+}
+
+body {
+  background: url("../images/body2.png") top repeat;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.main {
+  /*  background: url("../images/main2.png") no-repeat;*/
+  background-size: cover;
+
+  .header {
+    font-family: Trebuchet MS, sans-serif;
+    padding-top: 10px;
+
+    .container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        /*   margin-right: 82px;*/
+      }
+
+      .menu {
+
+        ul {
+          display: flex;
+          list-style: none;
+
+          .menu-item {
+            a {
+              text-decoration: none;
+              color: white;
+              font-size: 16px;
+            }
+
+            &:not(:last-child) {
+              margin-right: 56px;
+            }
+          }
+        }
+      }
+
+      .address {
+        display: flex;
+
+        .address-text {
+          margin-left: 22px;
+          color: white;
+          width: 160px;
+        }
+      }
+
+      .burger-menu {
+        cursor: pointer;
+        display: none;
+        fill: #b28f66;
+      }
+
+      .close {
+        display: none;
+      }
+    }
+  }
+
+
+  .main-info {
+    padding: 135px 0 36px 0;
+    overflow-x: hidden;
+
+
+    .container {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .main-info-text {
+        max-width: 675px;
+
+
+        .main-info-title {
+          font-family: Formular, sans-serif;
+          font-weight: bold;
+          font-size: 60px;
+          color: white;
+          margin-bottom: 50px;
+
+        }
+
+        .main-info-description {
+          color: white;
+          margin-bottom: 37px;
+          font-family: Trebuchet MS, sans-serif;
+          font-size: 18px;
+          max-width: 471px;
+
+        }
+
+        .main-info-action {
+          margin-bottom: 119px;
+        }
+
+        .main-info-benefits {
+          display: flex;
+          align-items: center;
+          gap: 64px;
+
+          .main-benefits-choice, .main-benefits-time {
+            .benefits-text();
+            max-width: 270px;
+            align-items: center;
+
+            .text {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .double {
+        display: none;
+        .main-info-action {
+          margin: 30px 0;
+        }
+
+        .main-info-benefits {
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 64px;
+
+          .main-benefits-choice, .main-benefits-time {
+            .benefits-text();
+            max-width: 270px;
+            align-items: center;
+
+            .text {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .main-image {
+      font-family: "Trebuchet MS", sans-serif;
+
+      .red-circle {
+        background: rgb(236, 26, 15);
+        border-radius: 50%;
+        position: absolute;
+        right: 55px;
+        top: -36px;
+        width: 100px;
+        height: 100px;
+        z-index: 1;
+        font-size: 16px;
+        color: rgb(255, 238, 228);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+      }
+
+      img {
+        position: absolute;
+        right: -145px;
+        bottom: 45px;
+      }
+
+      .price {
+        text-align: right;
+        position: absolute;
+        right: -10px;
+        top: 50px;
+
+        z-index: 2;
+
+        .actual-price {
+          font-size: 24px;
+          color: rgb(255, 255, 255);
+          font-weight: bold;
+          margin-bottom: 9px;
+        }
+
+        .non-actual-price {
+          text-decoration: line-through;
+          font-size: 16px;
+          color: rgb(255, 255, 255);
+        }
+      }
+
+      .main-info-image-text {
+        color: white;
+        position: absolute;
+        max-width: 250px;
+        right: 0;
+        bottom: 0;
+
+        .main-info-image-title {
+          font-size: 25px;
+          font-family: Formular, sans-serif;
+          font-weight: bold;
+          margin-bottom: 16px;
+        }
+
+        .main-info-image-description {
+          font-size: 14px;
+          font-family: Trebuchet MS, sans-serif;
+          line-height: 1.357;
+          text-align: left;
+
+        }
+      }
+    }
+  }
+}
+
+
+.button {
+  border-radius: 10px;
+  background-image: -moz-linear-gradient(17deg, rgb(196, 9, 0) 0%, rgb(207, 69, 0) 75%, rgb(218, 128, 0) 100%);
+  background-image: -webkit-linear-gradient(17deg, rgb(196, 9, 0) 0%, rgb(207, 69, 0) 75%, rgb(218, 128, 0) 100%);
+  background-image: -ms-linear-gradient(17deg, rgb(196, 9, 0) 0%, rgb(207, 69, 0) 75%, rgb(218, 128, 0) 100%);
+  width: 271px;
+  padding: 22px 0;
+  border: none;
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.about {
+  overflow-x: hidden;
+  padding-top: 136px;
+  position: relative;
+
+  .container {
+    position: relative;
+    text-align: center;
+
+    .about-pepper {
+      display: none;
+    }
+
+    .about-title {
+      .blocks-titles();
+      margin-bottom: 40px;
+    }
+
+    .about-description {
+      margin: 0 auto;
+      max-width: 614px;
+
+      .about-text {
+        font-size: 14px;
+        font-family: Trebuchet MS, sans-serif;
+        color: white;
+        line-height: 1.214;
+        margin-bottom: 20px;
+      }
+    }
+
+
+    .about-images {
+
+
+      .shadow {
+        background: red;
+        width: 80%;
+        height: 40%;
+        position: absolute;
+        top: 239px;
+        left: 67px;
+        border-radius: 50%;
+        filter: blur(70px);
+        z-index: -1;
+        opacity: .3;
+      }
+
+      .burgers {
+        position: relative;
+
+        .left-burger {
+          margin-left: -206px;
+          margin-right: -36px;
+        }
+
+        .right-burger {
+          margin-left: 261px;
+        }
+
+        .central-burger {
+          margin-left: -597px;
+          z-index: 2;
+        }
+      }
+
+
+    }
+  }
+}
+
+
+.differences {
+  padding-top: 85px;
+
+  .container {
+    text-align: center;
+
+    .differences-title {
+      .blocks-titles();
+    }
+
+    .pepper {
+      position: relative;
+
+      img {
+        position: absolute;
+        top: -75px;
+        right: 277px;
+
+      }
+    }
+
+    .differences-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .differences-cards {
+        display: flex;
+        flex-direction: column;
+
+        .differences-content-card {
+          max-width: 173px;
+
+          .differences-content-card-description {
+            .benefits-text();
+            margin-top: 25px;
+          }
+
+          &:first-child {
+            margin-bottom: 100px;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.menu-block {
+  margin-bottom: 86px;
+
+  .container {
+    text-align: center;
+    position: relative;
+    .menu-pepper {
+      display: none;
+    }
+
+    .menu-title {
+      .blocks-titles();
+      margin-bottom: 48px;
+    }
+
+    .category-menu {
+      display: flex;
+      justify-content: center;
+      font-family: Trebuchet MS, sans-serif;
+
+      .category-menu-item {
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: 61px;
+        }
+      }
+    }
+
+    .menu-slider {
+      position: relative;
+      padding: 0 30px;
+      display: flex;
+      justify-content: center;
+
+      .slider-item {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-top: 63px;
+
+        .slider-item-image {
+          height: 163px;
+          margin-bottom: 55px;
+          box-sizing: border-box;
+
+          .shadow {
+            background: red;
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            top: 45px;
+            left: 67px;
+            border-radius: 50%;
+            filter: blur(50px);
+            z-index: -1;
+            opacity: .3;
+          }
+
+          img {
+            max-width: 200px;
+          }
+
+        }
+
+        .slider-item-title {
+          font-family: Formular, sans-serif;
+          font-weight: bold;
+          font-size: 18px;
+          margin-bottom: 14px;
+        }
+
+        .slider-item-description {
+          max-width: 170px;
+          font-family: Trebuchet MS, sans-serif;
+          font-size: 14px;
+          color: #DBD3C8FF;
+        }
+      }
+
+    }
+
+    .slider-arrow {
+      position: relative;
+      cursor: pointer;
+
+      .prev {
+        position: absolute;
+        list-style: none;
+        left: -20px;
+        top: -250px;
+      }
+
+      .next {
+        position: absolute;
+        list-style: none;
+        right: -20px;
+        top: -250px;
+      }
+    }
+  }
+}
+
+.reviews {
+  padding-bottom: 169px;
+
+  .container {
+    position: relative;
+
+    .pepper {
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 440px;
+      }
+    }
+
+    .reviews-title {
+      text-align: center;
+      margin-bottom: 56px;
+      .blocks-titles();
+    }
+
+    .review-slider {
+      position: relative;
+      padding: 0 30px;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+
+      .slider-item {
+        width: 90% !important;
+        height: 100%;
+        padding: 0 5% 5% 5%;
+
+
+        .review-card {
+          width: 330px;
+          height: 350px;
+          margin: 0 14px;
+           box-sizing: border-box;
+          padding: 29px 21px 27px 21px;
+          background: url("../images/review-bg.png");
+
+
+          .card-info {
+            display: flex;
+            justify-content: space-between;
+
+            .information {
+              position: relative;
+
+              .socials {
+                display: flex;
+
+                .facebook {
+                  margin-right: 15px;
+                }
+
+                svg {
+                  width: 30px;
+                  height: 30px;
+                  fill: #ffaf58;
+                  &:hover {
+                    opacity: .9;
+                  }
+                }
+              }
+
+              .name {
+                font-size: 25px;
+                font-family: "Formular", sans-serif;
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+                line-height: 1.92;
+              }
+            }
+
+            .avatar {
+              img {
+                width: 80px;
+                border-radius: 50%;
+
+              }
+            }
+          }
+
+          .review-object {
+            height: 50px;
+            font-size: 14px;
+            font-family: "Trebuchet MS", sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            line-height: 1.214;
+          }
+
+          .review-comment {
+            margin-top: 29px;
+            font-size: 14px;
+            font-family: "Trebuchet MS", sans-serif;
+            color: rgb(255, 255, 255);
+            line-height: 1.357;
+          }
+        }
+      }
+
+
+    }
+
+    .slider-arrow {
+      position: relative;
+      cursor: pointer;
+
+      .review-prev {
+        position: absolute;
+        list-style: none;
+        left: -20px;
+        top: -205px;
+      }
+
+      .review-next {
+        position: absolute;
+        list-style: none;
+        right: -20px;
+        top: -205px;
+      }
+    }
+  }
+}
+
+.stock {
+  margin-bottom: 170px;
+
+  .container {
+    .stock-title {
+      margin-bottom: 40px;
+      .blocks-titles();
+    }
+
+    .stock-content {
+      display: grid;
+      /*grid-template-columns: repeat(3, 1fr);*/
+      gap: 30px;
+
+      .stock-card {
+        &.vegan {
+          grid-column: 1/2;
+        }
+
+        &.tester {
+          grid-column: 2/3;
+        }
+
+        &.sea {
+          grid-column: 1/3;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &.big {
+          grid-column: 3/4;
+          grid-row: 1 /3;
+
+          img {
+            height: 100%;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+
+.booking {
+  margin-top: 85px;
+  margin-bottom: 130px;
+
+  .container {
+    position: relative;
+
+    .booking-title {
+      margin-bottom: 40px;
+      .blocks-titles();
+    }
+
+    .booking-content {
+
+      display: flex;
+      gap: 43px;
+
+      .booking-image {
+        .shadow {
+          background: red;
+          width: 30%;
+          height: 50%;
+          position: absolute;
+          left: 240px;
+          border-radius: 50%;
+          filter: blur(100px);
+          z-index: -1;
+          opacity: .3;
+        }
+      }
+
+      .booking-info {
+        .booking-description {
+          max-width: 262px;
+          font-size: 14px;
+          font-family: "Trebuchet MS", sans-serif;
+          color: rgb(255, 255, 254);
+          line-height: 1.357;
+          text-align: left;
+          margin-bottom: 20px;
+        }
+
+        .timer {
+          font-family: "Trebuchet MS", sans-serif;
+
+          .timer-items {
+            display: flex;
+            color: red;
+
+            span {
+              background: #ffffff;
+              padding: 10px 15px;
+              border-radius: 5px;
+              margin-right: 5px;
+            }
+
+            .minutes, .dots, .seconds {
+              display: flex;
+            }
+          }
+
+          .timer-description {
+            display: flex;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 40px;
+
+            .minutes-description {
+              margin-left: 11px;
+            }
+
+            .seconds-description {
+              margin-left: 63px;
+            }
+          }
+        }
+
+        /*.timer__items {
+          display: flex;
+          font-size: 16px;
+
+          .timer__item {
+            position: relative;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-bottom: 15px;
+            text-align: center;
+
+            span {
+              .timer-style();
+            }
+          }
+
+          .timer__item::before {
+            content: attr(data-title);
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            font-size: 14px;
+          }
+
+          .timer__item:not(:last-child)::after {
+            content: ':';
+            .timer-style();
+          }
+       */
+      }
+
+      .booking-form {
+        max-width: 253px;
+
+        form {
+          position: relative;
+
+          .name-input {
+            .input();
+
+            &::placeholder {
+              color: white;
+            }
+          }
+
+          .error-name-input {
+            .form-error();
+            top: 52px;
+          }
+
+          .phone-input {
+            .input();
+
+            &::placeholder {
+              color: white;
+            }
+          }
+
+          .error-phone-input {
+            .form-error();
+            top: 122px;
+          }
+
+
+          .form-button {
+            border-radius: 5px;
+            background-image: -moz-linear-gradient(17deg, rgb(196, 9, 0) 0%, rgb(207, 69, 0) 75%, rgb(218, 128, 0) 100%);
+            background-image: -webkit-linear-gradient(17deg, rgb(196, 9, 0) 0%, rgb(207, 69, 0) 75%, rgb(218, 128, 0) 100%);
+            background-image: -ms-linear-gradient(17deg, rgb(196, 9, 0) 0%, rgb(207, 69, 0) 75%, rgb(218, 128, 0) 100%);
+            width: 100%;
+            height: 52px;
+            border: none;
+            font-size: 14px;
+            font-family: Trebuchet MS, sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            margin-bottom: 22px;
+            cursor: pointer;
+          }
+
+          .form-action-description {
+            font-size: 12px;
+            font-family: Trebuchet MS, sans-serif;
+            color: rgb(252, 252, 252);
+            line-height: 1.417;
+            text-align: left;
+
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .booking-pepper {
+    position: absolute;
+    right: 120px;
+    bottom: 12px;
+  }
+}
+
+.footer {
+  border-top: 1px solid rgb(37, 32, 32);
+  padding: 34px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+
+    }
+
+    .footer-address {
+      font-size: 12px;
+      font-family: "Trebuchet MS", sans-serif;
+      color: rgba(178, 143, 102, 0.502);
+      line-height: 2;
+
+
+    }
+
+    .footer-socials {
+      display: flex;
+
+      svg {
+        height: 30px;
+        fill: #ffaf58;
+        &:hover {
+        }
+      }
+    }
+  }
+}
+
+.loader {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.83);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  display: none;
+  flex-direction: column;
+
+  div {
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+
+}
+
+.booking-popup {
+
+  .container {
+    .popup-background {
+      position: fixed;
+      background: rgba(35, 31, 28, 0.8);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      align-items: center;
+      justify-content: center;
+      z-index: 99;
+      display: none;
+
+      .popup {
+        position: relative;
+        padding: 70px 0 82px 0;
+        border-radius: 10px;
+        background-color: rgb(9, 0, 0);
+        width: 858px;
+        text-align: center;
+
+        .close {
+          width: 13px;
+          fill: #706060;
+          position: absolute;
+          right: 20px;
+          top: 20px;
+          cursor: pointer;
+        }
+
+        .modal {
+          .modal-title {
+            font-size: 36px;
+            font-family: Formular, sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            line-height: 0.472;
+            margin-bottom: 19px;
+          }
+
+          .modal-text {
+            font-size: 14px;
+            font-family: "Trebuchet MS", sans-serif;
+            color: rgb(255, 255, 255);
+            line-height: 1.214;
+            margin-bottom: 33px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+@import "adaptive";
