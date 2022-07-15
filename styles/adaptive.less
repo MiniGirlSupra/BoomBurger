@@ -51,15 +51,19 @@
         .main-image {
 
           .red-circle {
-            top: -4px;
+            top: 49px;
           }
 
           .price {
-            top: 79px;
+            top: 126px;
+          }
+
+          .main-info-image-text {
+            bottom: -23px;
           }
 
           img {
-            max-width: 600px;
+            max-width: 700px;
           }
         }
       }
@@ -93,25 +97,6 @@
     }
   }
 
-  .menu-block {
-    .container {
-      .slider-arrow {
-        margin-top: 26px;
-
-        .prev {
-          margin-right: 10px;
-          display: inline-block;
-          position: static;
-        }
-
-        .next {
-          margin-left: 11px;
-          display: inline-block;
-          position: static;
-        }
-      }
-    }
-  }
 
   .reviews {
     .container {
@@ -120,7 +105,7 @@
         left: -47px;
       }
 
-      .slider-arrow {
+      .slider-arrows {
         margin-top: 26px;
         text-align: center;
 
@@ -151,30 +136,7 @@
 
 @media screen and (max-width: 1100px) {
   .main {
-    .main-info {
-      .container {
-        .main-image {
 
-          .red-circle {
-            top: 29px;
-          }
-
-          .price {
-            top: 106px;
-          }
-
-          img {
-            max-width: 550px;
-          }
-        }
-      }
-    }
-  }
-
-}
-
-@media screen and (max-width: 1023px) {
-  .main {
     .header {
       .container {
         padding: 0 10px;
@@ -208,17 +170,19 @@
 
             .menu-item {
               margin-top: 30px;
-              margin-right: 0;
+              margin-right: 0 !important;
 
               a {
                 color: white;
               }
 
               &:last-child {
-                margin-left: -55px;
+                margin-top: 30px;
+                margin-right: 0 !important;
               }
             }
           }
+
         }
 
         .address {
@@ -236,17 +200,47 @@
 
     .main-info {
       .container {
+        .main-image {
+
+          .red-circle {
+            top: 67px;
+          }
+
+          img {
+            max-width: 630px;
+            right: -144px;
+            bottom: -78px;
+          }
+
+          .price {
+            top: 136px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1023px) {
+  .main {
+
+    .main-info {
+      padding-bottom: 0;
+
+      .container {
         display: flex;
         flex-direction: column;
         text-align: center;
 
         .main-info-text {
-          .main-info-title {
-          }
 
           .main-info-description {
-
             max-width: 100%;
+
+            br {
+              display: none;
+            }
           }
 
           .main-info-action {
@@ -264,13 +258,11 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          position: static;
-          margin-top: 50px;
-
+          position: relative;
 
           .red-circle {
-            right: 343px;
-            top: 602px;
+            right: 148px;
+            top: 63px;
           }
 
           .price {
@@ -279,9 +271,8 @@
             color: rgb(255, 255, 255);
             font-weight: bold;
             line-height: 1.25;
-            right: 318px;
-            top: 962px;
-
+            right: 130px;
+            top: 425px;
           }
 
           img {
@@ -291,10 +282,7 @@
 
           .main-info-image-text {
             position: static;
-
-            .main-info-image-title {
-
-            }
+            margin-top: -112px;
 
             .main-info-image-description {
               text-align: center;
@@ -365,24 +353,8 @@
   }
 }
 
+
 @media screen and (max-width: 890px) {
-
-  .main {
-    .main-info {
-      .container {
-        .main-image {
-          .red-circle {
-            right: 280px;
-          }
-
-          .price {
-            right: 272px;
-            top: 968px;
-          }
-        }
-      }
-    }
-  }
 
   .booking {
     .container {
@@ -472,21 +444,23 @@
 }
 
 @media screen and (max-width: 768px) {
-  .main {
-    .main-info {
-      .container {
-        .main-image {
-          display: flex;
 
-          .red-circle {
-            right: 200px;
-            top: 600px;
-          }
+  .menu-block {
+    margin-bottom: 150px;
 
-          .price {
-            right: 198px;
-            top: 964px;
-          }
+    .container {
+
+      .menu-slider-arrow {
+        margin-top: 20px;
+
+        .slider-arrow-prev:before {
+          position: static;
+          margin-right: 10px;
+
+        }
+
+        .slider-arrow-next:before {
+          position: static;
         }
       }
     }
@@ -513,14 +487,6 @@
   }
 }
 
-/*@media screen and (max-width: 720px) {
-  .about {
-    .container {
-
-    }
-  }
-}*/
-
 @media screen and (max-width: 709px) {
   .main {
     .main-info {
@@ -537,20 +503,6 @@
           .main-info-description {
             font-size: 18px;
             line-height: 1.417;
-          }
-        }
-
-        .main-image {
-          display: flex;
-
-          .red-circle {
-            right: 181px;
-            top: 585px;
-          }
-
-          .price {
-            right: 158px;
-            top: 950px;
           }
         }
       }
@@ -573,9 +525,9 @@
       .popup-background {
 
         .popup {
-          padding: 0 20px;
           max-width: 80%;
           margin: 50% auto;
+          box-sizing: border-box;
 
           .modal {
             .modal-title {
@@ -585,14 +537,14 @@
 
             .modal-text {
               margin: 0 auto;
-              width: 300px;
+              max-width: 300px;
               font-size: 12px;
               line-height: 1.5;
             }
 
             .modal-image {
               img {
-                width: 250px;
+                max-width: 250px;
               }
             }
           }
@@ -607,13 +559,6 @@
     .main-info {
       .container {
         .main-info-text {
-          /*.main-info-title {
-
-          }
-
-          .main-info-description {
-
-          }*/
 
           .main-info-benefits {
             display: none;
@@ -621,16 +566,6 @@
 
           .main-info-action {
             display: none;
-          }
-        }
-
-        .main-image {
-          .red-circle {
-            top: 389px;
-          }
-
-          .price {
-            top: 762px;
           }
         }
 
@@ -726,9 +661,13 @@
   }
 
   .menu-block {
+    margin-bottom: 100px;
     .container {
       .category-menu {
         .category-menu-item {
+          .category-title {
+            font-size: 12px;
+          }
           &:not(:last-child) {
             margin-right: 22px;
           }
@@ -761,6 +700,25 @@
       }
     }
   }
+
+  .footer {
+    .container {
+      flex-direction: column;
+      gap: 40px;
+
+      .logo {
+        order: 1;
+      }
+
+      .footer-address {
+        order: 3;
+      }
+
+      .footer-socials {
+        order: 2;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 548px) {
@@ -771,33 +729,31 @@
         .main-info-text {
           .main-info-title {
             font-size: 30px;
-          }
-
-          .main-info-description {
-            padding: 0 30px;
-            font-size: 15px;
-            line-height: 1.417;
+            margin-top: 31px;
           }
         }
 
-        .main-image {
-          margin-top: 0;
-          content: url("../images/main-burger320.png");
+        .main-info-description {
+          padding: 0 30px;
+          font-size: 15px;
+          line-height: 1.417;
+        }
 
-          img {
-            display: none;
-          }
+
+        .main-image {
 
           .red-circle {
-            display: none;
-            /*right: 100px;
-            top: 340px;*/
+            right: 116px;
+            top: 51px;
+          }
+
+          img {
+            width: 520px;
           }
 
           .price {
-            display: none;
-            /*top: 700px;
-            right: 100px;*/
+            right: 83px;
+            top: 348px;
           }
         }
       }
@@ -859,6 +815,7 @@
   }
 
   .stock {
+    margin-bottom: 130px;
     .container {
       .stock-title {
         font-size: 30px;
@@ -874,6 +831,7 @@
     }
   }
 }
+
 
 @media screen and (max-width: 500px) {
   .main {
@@ -936,6 +894,20 @@
       }
 
       .differences-content {
+        .differences-cards {
+          .differences-content-card {
+            .differences-content-card-description {
+              font-size: 12px;
+            }
+          }
+          &:first-child {
+            column-gap: 34px;
+          }
+          &:last-child {
+            column-gap: 34px;
+          }
+        }
+
         .image-card {
           img {
             max-width: 320px;
@@ -1037,8 +1009,10 @@
       }
     }
   }
-}
-
+}/*
+@media screen and (max-width: 385px) {
+  
+}*/
 @media screen and (max-width: 378px) {
   .main {
     .main-info {
@@ -1124,8 +1098,10 @@
     .main-info {
       .container {
         .main-info-text {
+          margin-top: 0;
+
           .main-info-title {
-            font-size: 25px;
+            font-size: 24px;
             line-height: 1.28;
           }
 
@@ -1138,21 +1114,83 @@
         }
 
         .main-image {
+
           .red-circle {
-            right: 47px;
-            top: 248px;
+            font-size: 12px;
+            width: 80px;
+            height: 80px;
+            right: 66px;
+            top: 32px;
           }
 
           img {
-            width: 310px;
+            width: 380px;
           }
 
           .price {
-            right: 10px;
-            top: 481px;
+            right: 45px;
+            top: 242px;
+          }
+
+          .main-info-image-text {
+            margin-top: -62px;
+
+            .main-info-image-title {
+              font-size: 18px;
+            }
+
+            .main-info-image-description {
+              font-size: 12px;
+              line-height: 1.417;
+            }
+          }
+        }
+
+        .double {
+          .main-info-benefits {
+            gap: 20px;
+            .main-benefits-choice {
+              .icon {
+                img {
+                  width: 38px;
+                }
+              }
+
+              .text {
+                width: 151px;
+                margin-left: 11px;
+                font-size: 12px;
+              }
+            }
+
+            .main-benefits-time {
+              .icon {
+                img {
+                  width: 48px;
+                }
+              }
+            }
+            .main-benefits-time {
+              .icon {
+                img {
+                  width: 48px;
+                }
+              }
+              .text {
+                width: 151px;
+                margin-left: 13px;
+                font-size: 12px;
+              }
+            }
           }
         }
       }
+    }
+  }
+
+  .differences {
+    .container {
+
     }
   }
 
@@ -1170,6 +1208,7 @@
       .menu-title {
         text-align: center;
       }
+
     }
   }
 
@@ -1187,28 +1226,8 @@
         }
       }
     }
-
   }
 
-
-  .footer {
-    .container {
-      flex-direction: column;
-      gap: 40px;
-
-      .logo {
-        order: 1;
-      }
-
-      .footer-address {
-        order: 3;
-      }
-
-      .footer-socials {
-        order: 2;
-      }
-    }
-  }
 
   .loader {
     div {

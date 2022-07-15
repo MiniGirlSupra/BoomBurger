@@ -48,6 +48,7 @@
   display: none;
   position: absolute;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -61,6 +62,17 @@
 @font-face {
   font-family: Formular;
   src: url("../fonts/FormularBold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Trebuchet MS;
+  src: url("../fonts/Trebuchet_MS.ttf");
+}
+
+@font-face {
+  font-family: Trebuchet MS;
+  src: url("../fonts/Trebuchet_MS_bold.ttf");
   font-weight: bold;
 }
 
@@ -95,6 +107,7 @@ body {
       }
 
       .menu {
+        margin-right: 95px;
 
         ul {
           display: flex;
@@ -112,12 +125,17 @@ body {
             }
           }
         }
+
+        &.open {
+          display: block;
+        }
       }
 
       .address {
         display: flex;
 
         .address-text {
+          font-size: 14px;
           margin-left: 22px;
           color: white;
           width: 160px;
@@ -139,8 +157,7 @@ body {
 
   .main-info {
     padding: 135px 0 36px 0;
-    overflow-x: hidden;
-
+    overflow: hidden;
 
     .container {
       display: flex;
@@ -166,7 +183,7 @@ body {
           font-family: Trebuchet MS, sans-serif;
           font-size: 18px;
           max-width: 471px;
-
+          line-height: 1.611;
         }
 
         .main-info-action {
@@ -189,8 +206,10 @@ body {
           }
         }
       }
+
       .double {
         display: none;
+
         .main-info-action {
           margin: 30px 0;
         }
@@ -223,7 +242,7 @@ body {
         border-radius: 50%;
         position: absolute;
         right: 55px;
-        top: -36px;
+        top: -11px;
         width: 100px;
         height: 100px;
         z-index: 1;
@@ -238,15 +257,15 @@ body {
 
       img {
         position: absolute;
-        right: -145px;
-        bottom: 45px;
+        right: -138px;
+        bottom: -96px;
       }
 
       .price {
         text-align: right;
         position: absolute;
         right: -10px;
-        top: 50px;
+        top: 65px;
 
         z-index: 2;
 
@@ -307,9 +326,9 @@ body {
 }
 
 .about {
-  overflow-x: hidden;
   padding-top: 136px;
   position: relative;
+  overflow: hidden;
 
   .container {
     position: relative;
@@ -326,7 +345,7 @@ body {
 
     .about-description {
       margin: 0 auto;
-      max-width: 614px;
+      max-width: 574px;
 
       .about-text {
         font-size: 14px;
@@ -339,14 +358,14 @@ body {
 
 
     .about-images {
-
+      padding-bottom: 100px;
 
       .shadow {
         background: red;
-        width: 80%;
-        height: 40%;
+        width: 90%;
+        height: 30%;
         position: absolute;
-        top: 239px;
+        top: 266px;
         left: 67px;
         border-radius: 50%;
         filter: blur(70px);
@@ -379,7 +398,7 @@ body {
 
 
 .differences {
-  padding-top: 85px;
+  padding-bottom: 114px;
 
   .container {
     text-align: center;
@@ -395,7 +414,6 @@ body {
         position: absolute;
         top: -75px;
         right: 277px;
-
       }
     }
 
@@ -409,7 +427,7 @@ body {
         flex-direction: column;
 
         .differences-content-card {
-          max-width: 173px;
+          max-width: 175px;
 
           .differences-content-card-description {
             .benefits-text();
@@ -432,6 +450,7 @@ body {
   .container {
     text-align: center;
     position: relative;
+
     .menu-pepper {
       display: none;
     }
@@ -458,7 +477,7 @@ body {
     .menu-slider {
       position: relative;
       padding: 0 30px;
-      display: flex;
+      /*display: flex;*/
       justify-content: center;
 
       .slider-item {
@@ -509,11 +528,29 @@ body {
 
     }
 
-    .slider-arrow {
+    .beef-slider, .duck-slider, .crab-slider, .chicken-slider {
+      display: none;
+    }
+
+    .menu-slider-arrow {
       position: relative;
       cursor: pointer;
 
-      .prev {
+      .slider-arrow-prev:before {
+        content: url("../images/left-arrow.png");
+        position: absolute;
+        left: -20px;
+        top: -250px;
+      }
+
+      .slider-arrow-next:before {
+        content: url("../images/right-arrow.png");
+        position: absolute;
+        top: -250px;
+        right: -20px;
+      }
+
+      /*.prev {
         position: absolute;
         list-style: none;
         left: -20px;
@@ -525,7 +562,7 @@ body {
         list-style: none;
         right: -20px;
         top: -250px;
-      }
+      }*/
     }
   }
 }
@@ -568,8 +605,8 @@ body {
         .review-card {
           width: 330px;
           height: 350px;
-          margin: 0 14px;
-           box-sizing: border-box;
+          margin: 0 auto;
+          box-sizing: border-box;
           padding: 29px 21px 27px 21px;
           background: url("../images/review-bg.png");
 
@@ -592,6 +629,7 @@ body {
                   width: 30px;
                   height: 30px;
                   fill: #ffaf58;
+
                   &:hover {
                     opacity: .9;
                   }
@@ -638,7 +676,7 @@ body {
 
     }
 
-    .slider-arrow {
+    .slider-arrows {
       position: relative;
       cursor: pointer;
 
@@ -724,12 +762,16 @@ body {
       gap: 43px;
 
       .booking-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
         .shadow {
           background: red;
-          width: 30%;
-          height: 50%;
+          width: 80%;
+          height: 100%;
           position: absolute;
-          left: 240px;
           border-radius: 50%;
           filter: blur(100px);
           z-index: -1;
@@ -879,13 +921,15 @@ body {
         }
       }
     }
+
+    .booking-pepper {
+      position: absolute;
+      right: 120px;
+      bottom: -132px;
+    }
   }
 
-  .booking-pepper {
-    position: absolute;
-    right: 120px;
-    bottom: 12px;
-  }
+
 }
 
 .footer {
@@ -906,19 +950,15 @@ body {
       font-family: "Trebuchet MS", sans-serif;
       color: rgba(178, 143, 102, 0.502);
       line-height: 2;
-
+      text-align: center;
 
     }
 
     .footer-socials {
       display: flex;
+      gap: 10px;
+      align-items: center;
 
-      svg {
-        height: 30px;
-        fill: #ffaf58;
-        &:hover {
-        }
-      }
     }
   }
 }
@@ -1003,7 +1043,6 @@ body {
       transform: translate(24px, 0);
     }
   }
-
 }
 
 .booking-popup {
@@ -1029,6 +1068,7 @@ body {
         width: 858px;
         text-align: center;
 
+
         .close {
           width: 13px;
           fill: #706060;
@@ -1044,8 +1084,8 @@ body {
             font-family: Formular, sans-serif;
             color: rgb(255, 255, 255);
             font-weight: bold;
-            line-height: 0.472;
-            margin-bottom: 19px;
+            line-height: 1.4;
+            margin: 0 20px 19px 20px;
           }
 
           .modal-text {

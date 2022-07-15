@@ -2,24 +2,27 @@
 $(document).ready(() => {
 
     $('#burger-menu').click(function () {
-        $('#nav-menu').show();
+        $('#nav-menu').addClass('open');
     })
     $('.menu-item *').click(function () {
-        $('#nav-menu').hide();
+        $('#nav-menu').removeClass('open');
     })
     $('#close-menu').click(function () {
-        $('#nav-menu').hide();
+        $('#nav-menu').removeClass('open');
     })
 
+
     //   слайдер для меню / бургеры
-    $('.menu-slider').slick({
-        infinite: false,
+    let slickBurgerOptions = {
         slidesToShow: 4,
         slidesToScroll: 1,
         rows: 1,
         arrows: true,
-        prevArrow: $('.prev'),
-        nextArrow: $('.next'),
+        appendArrows: '.menu-slider-arrow',
+        prevArrow: $('.slider-arrow-prev'),
+        nextArrow: $('.slider-arrow-next'),
+        /*prevArrow: $('.prev'),
+        nextArrow: $('.next'),*/
         responsive: [
             {
                 breakpoint: 1024,
@@ -37,16 +40,40 @@ $(document).ready(() => {
                 }
             }
         ]
-    });
+    };
+    let chickenBurger = $('.chicken-slider');
+    let beefBurger = $('.beef-slider');
+    let duckBurger = $('.duck-slider');
+    let crabBurger = $('.crab-slider');
+    let activeSlider = $('.active');
+
+    activeSlider.slick(slickBurgerOptions);
+    chickenBurger.slick(slickBurgerOptions);
+    beefBurger.slick(slickBurgerOptions);
+    duckBurger.slick(slickBurgerOptions);
+    crabBurger.slick(slickBurgerOptions);
+
+    setTimeout(() => {
+        chickenBurger.slick('refresh');
+        beefBurger.slick('refresh');
+        duckBurger.slick('refresh');
+        crabBurger.slick('refresh');
+        activeSlider.slick('refresh');
+    }, 30)
+
 
     // слайдер для отзывов
-    $('.review-slider').slick({
-        infinite: false,
+
+    let slickReviewOptions = {
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
+        appendArrows: '.slider-arrows',
         prevArrow: $('.review-prev'),
         nextArrow: $('.review-next'),
+
+        /*prevArrow: $('.review-prev'),
+        nextArrow: $('.review-next'),*/
         responsive: [
             {
                 breakpoint: 1140,
@@ -64,51 +91,64 @@ $(document).ready(() => {
                 }
             }
         ],
-    });
+    };
+
+    let reviewSlider = $('.review-slider');
+    reviewSlider.slick(slickReviewOptions);
+
+
+    setTimeout(() => {
+        reviewSlider.slick('refresh');
+    }, 30)
 
 //wow
     new WOW().init();
 
 // скролл к бронированию при нажатии на кнопку "Забронировать стол"
 
-        $('#booking-table').click(function () {
-            $('.booking')[0].scrollIntoView({behavior: "smooth"});
-        });
+    $('#booking-table').click(function () {
+        $('.booking')[0].scrollIntoView({behavior: "smooth"});
+    });
 // при разрешении экрана ниже 679px
-        $('#booking-table-double').click(function () {
-            $('.booking')[0].scrollIntoView({behavior: "smooth"});
-        });
+    $('#booking-table-double').click(function () {
+        $('.booking')[0].scrollIntoView({behavior: "smooth"});
+    });
 
 
 // клик на категорию меню
-    let chickenBurger = $('.chicken');
-    let beefBurger = $('.beef');
-    let duckBurger = $('.duck');
-    let crabBurger = $('.crab');
+
 
     $('#chicken-menu').click(function () {
         chickenBurger.show();
         beefBurger.hide();
         duckBurger.hide();
         crabBurger.hide();
+        activeSlider.hide();
+        chickenBurger.slick('refresh');
     })
     $('#beef-menu').click(function () {
         beefBurger.show();
         chickenBurger.hide();
         duckBurger.hide();
         crabBurger.hide();
+        activeSlider.hide();
+        beefBurger.slick('refresh');
     })
     $('#duck-menu').click(function () {
         duckBurger.show();
         chickenBurger.hide();
         beefBurger.hide();
         crabBurger.hide();
+        activeSlider.hide();
+        duckBurger.slick('refresh');
     })
     $('#crab-menu').click(function () {
         crabBurger.show();
         chickenBurger.hide();
         beefBurger.hide();
         duckBurger.hide();
+        activeSlider.hide();
+        crabBurger.slick('refresh');
     })
 
 // валидация полей
